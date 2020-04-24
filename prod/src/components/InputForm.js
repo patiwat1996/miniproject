@@ -24,15 +24,15 @@ const InputForm = props => {
             <table>
                 <tbody>
                     <tr>
-                        <td>Name</td>
+                        <td>Caption</td>
                         <td>
                             <input className='inpt' type="text" onChange={(e) => dispatch({ type: "CHANGE_NAME", name: e.target.value })} />
                         </td>
                     </tr>
                     <tr>
-                        <td>Weight</td>
+                        <td>Name</td>
                         <td>
-                            <input className='inpt' type="number" onChange={(e) => dispatch({ type: "CHANGE_WEIGHT", weight: e.target.value })} />
+                            <input className='inpt' type="text" onChange={(e) => dispatch({ type: "CHANGE_WEIGHT", weight: e.target.value })} />
                         </td>
                     </tr>
                     <tr>
