@@ -1,15 +1,13 @@
 import React, { useState, useEffect } from 'react'
-import axios from 'axios'
-import PictureList from './components/PictureList'
-import InputForm from './components/InputForm';
-
+import PictureList2 from './components/PictureList2'
+import LoginForm from './components/LoginForm';
 const App = () => {
   return (
     <div>
       <h2>Share Picture</h2>
-      <PictureList  />
-     
-      <InputForm />
+      <PictureList2  />
+      <LoginForm />
+
 
       <div>{Date()}</div>
       
