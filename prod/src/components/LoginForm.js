@@ -3,6 +3,7 @@ import auth from '../firebase'
 import PictureList from './PictureList'
 import InputForm from './InputForm';
 
+
 class LoginForm extends React.Component {
   constructor(props) {
     super(props)
@@ -67,7 +68,7 @@ class LoginForm extends React.Component {
       return (
         <div>
           <p>Hello {currentUser.email}</p>
-          <button onClick={this.logout}>Logout</button>
+          <button className="button1" onClick={this.logout}>Logout</button>
           <PictureList  />
           <InputForm />
         </div>
@@ -106,14 +107,9 @@ class LoginForm extends React.Component {
 
               {message ? <p className="help is-danger">{message}</p> : null}
 
-              <div className="field is-grouped">
-                <div className="control">
-                  <button className="button is-link">Submit</button>
-                </div>
-                <div className="control">
-                  <button className="button is-text">Cancel</button>
-                </div>
-              </div>
+                  <button className="button">Submit</button>
+                
+                  <button className="button1">Cancel</button>
             </form>
           </div>
         </div>

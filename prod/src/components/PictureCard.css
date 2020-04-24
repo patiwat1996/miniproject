@@ -42,10 +42,12 @@
 }
 
 .picturecard-actions {
-    background-color: white;
+    background-color: rgb(5, 219, 5);
     display: flex;
 }
-
+.picturecard-actions2 {
+    background-color: rgb(248, 0, 12);
+}
 .picturecard-actions > div {
     flex: 1;
     padding: 4px;

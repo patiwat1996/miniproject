@@ -23,8 +23,11 @@ const PictureCard = props => {
             </div>
             <div className='picturecard-actions'>
                 <div onClick={updatePicture}>Update</div>
+            
+            <div className='picturecard-actions2'>
                 <div onClick={deletePicture}>Delete</div>
             </div>
+        </div>
         </div>
 
     )
