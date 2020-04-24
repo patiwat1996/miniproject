@@ -107,7 +107,7 @@ class LoginForm extends React.Component {
 
               {message ? <p className="help is-danger">{message}</p> : null}
 
-                  <button className="button">Submit</button>
+                  <button className="button">Login</button>
                 
                   <button className="button1">Cancel</button>
             </form>
