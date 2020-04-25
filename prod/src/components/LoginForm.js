@@ -3,7 +3,6 @@ import auth from '../firebase'
 import PictureList from './PictureList'
 import InputForm from './InputForm';
 
-
 class LoginForm extends React.Component {
   constructor(props) {
     super(props)
@@ -77,14 +76,16 @@ class LoginForm extends React.Component {
     }
 
     return (
+      <div className="logincss"> 
       <section className="section container">
         <div className="columns is-centered">
           <div className="column is-half">
             <form onSubmit={this.onSubmit}>
               <div className="field">
-                <label className="label">Email</label>
+                <label className="Email">Login</label>
                 <div className="control">
                   <input
+                    placeholder="Email"
                     className="input"
                     type="email"
                     name="email"
@@ -94,9 +95,10 @@ class LoginForm extends React.Component {
               </div>
 
               <div className="field">
-                <label className="label">Password</label>
+                {/* <label className="Pass">Password</label> */}
                 <div className="control">
                   <input
+                  placeholder="Password"
                     className="input"
                     type="password"
                     name="password"
@@ -107,13 +109,12 @@ class LoginForm extends React.Component {
 
               {message ? <p className="help is-danger">{message}</p> : null}
 
-                  <button className="button">Login</button>
-                
-                  <button className="button1">Cancel</button>
+                  <br/><button className="button">Login</button>
             </form>
           </div>
         </div>
       </section>
+      </div>
     )
   }
 }
