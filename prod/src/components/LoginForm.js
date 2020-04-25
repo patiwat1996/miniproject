@@ -68,7 +68,7 @@ class LoginForm extends React.Component {
         <div>
           <p>Hello {currentUser.email}</p>
           <button className="button1" onClick={this.logout}>Logout</button>
-          <PictureList  />
+          <PictureList  /><br/>
           <InputForm />
         </div>
 
