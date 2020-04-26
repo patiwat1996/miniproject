@@ -2,6 +2,7 @@ import React from 'react';
 import './InputForm.css';
 import { useDispatch, useSelector } from 'react-redux'
 import axios from 'axios'
+import Linkbt from './Linkbt';
 
 const InputForm = props => {
     const { data, onChange } = props;
@@ -12,16 +13,19 @@ const InputForm = props => {
 
     const addPicture = async () => {
         const result = await axios.post(`http://localhost/api/pictures/`, form)
-        dispatch({ 
-            type: "ADD_PICTURE", 
-            picture: {...form,id:pictures.length > 0 ? pictures[pictures.length - 1].id+1 : 0} 
+        dispatch({
+            type: "ADD_PICTURE",
+            picture: { ...form, id: pictures.length > 0 ? pictures[pictures.length - 1].id + 1 : 0 }
         })
     }
 
     return (
-        <div className='form-container'>
+        <div className='text-left'>
+            <br />
             <h2>Add Picture</h2>
-            <table>
+            <br />
+
+            <table >
                 <tbody>
                     <tr>
                         <td>Caption</td>
@@ -44,11 +48,16 @@ const InputForm = props => {
                     <tr>
                         <td></td>
                         <td>
-                            <button className='btn' onClick={addPicture}>CREATE</button>
+                            <br />
+                            <button className='button' onClick={addPicture}>CREATE</button>
+                            <br />
+                            <br />
+                            <br />
                         </td>
                     </tr>
                 </tbody>
             </table>
+            <Linkbt />
         </div>
     )
 }

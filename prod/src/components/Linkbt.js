@@ -4,9 +4,9 @@ import '@fortawesome/fontawesome-free/css/all.min.css';
 import 'bootstrap-css-only/css/bootstrap.min.css';
 import 'mdbreact/dist/css/mdb.css';
 
-const Link = () => {
+const Linkbt = () => {
   return (
-    <MDBFooter color="cyan" className="font-small darken-3 pt-0">
+    <MDBFooter color="stylish-color-dark" className="font-small darken-3 pt-0">
       <MDBContainer>
         <MDBRow>
           <MDBCol md="12" className="py-5">
@@ -29,4 +29,4 @@ const Link = () => {
   );
 }
 
-export default Link;
+export default Linkbt;

@@ -1,7 +1,11 @@
 import React from 'react'
 import auth from '../firebase'
+import './InputForm.css';
 import PictureList from './PictureList'
 import InputForm from './InputForm';
+
+import 'bootstrap/dist/css/bootstrap.min.css';
+
 
 class LoginForm extends React.Component {
   constructor(props) {
@@ -65,55 +69,63 @@ class LoginForm extends React.Component {
 
     if (currentUser) {
       return (
-        <div>
-          <p>Hello {currentUser.email}</p>
+        <div className="logout">
+          <br />
+          <br />
+          <p className="p1">Hello {currentUser.email}</p>
           <button className="button1" onClick={this.logout}>Logout</button>
-          <PictureList  /><br/>
+          <PictureList /><br />
           <InputForm />
         </div>
-
       )
     }
 
     return (
-      <div className="logincss"> 
-      <section className="section container">
-        <div className="columns is-centered">
-          <div className="column is-half">
-            <form onSubmit={this.onSubmit}>
-              <div className="field">
-                <label className="Email">Login</label>
-                <div className="control">
-                  <input
-                    placeholder="Email"
-                    className="input"
-                    type="email"
-                    name="email"
-                    onChange={this.onChange}
-                  />
+
+      <div className="logincss">
+        <br />
+        <br />
+
+
+        <section className="section container">
+          <div className="columns is-centered">
+            <div className="column is-half">
+              <form onSubmit={this.onSubmit}>
+                <div className="field">
+                  <label className="Email">Login</label>
+                  <div className="control">
+                    <input
+                      placeholder="Email"
+                      className="input"
+                      type="email"
+                      name="email"
+                      onChange={this.onChange}
+                    />
+                  </div>
                 </div>
-              </div>
 
-              <div className="field">
-                {/* <label className="Pass">Password</label> */}
-                <div className="control">
-                  <input
-                  placeholder="Password"
-                    className="input"
-                    type="password"
-                    name="password"
-                    onChange={this.onChange}
-                  />
+                <div className="field">
+                  <div className="control">
+                    <input
+                      placeholder="Password"
+                      className="input"
+                      type="password"
+                      name="password"
+                      onChange={this.onChange}
+                    />
+                  </div>
                 </div>
-              </div>
 
-              {message ? <p className="help is-danger">{message}</p> : null}
 
-                  <br/><button className="button">Login</button>
-            </form>
+                {message ? <p className="help is-danger">{message}</p> : null}
+
+
+                <br /><button className="button">Login</button>
+
+              </form>
+            </div>
           </div>
-        </div>
-      </section>
+        </section>
       </div>
     )
   }

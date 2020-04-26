@@ -2,7 +2,7 @@ import React from 'react';
 import './PictureCard.css';
 import {useDispatch, useSelector} from 'react-redux'
 import axios from 'axios'
-const PictureCard = props => {
+const PictureCard2 = props => {
 
     const dispatch = useDispatch()
     const form = useSelector(state => state.form)
@@ -18,4 +18,4 @@ const PictureCard = props => {
     )
 }
 
-export default PictureCard;
+export default PictureCard2;
