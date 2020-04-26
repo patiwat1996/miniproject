@@ -27,6 +27,7 @@ const Home = props => {
     return (
 
         <div>
+           <br/> <h1 className="text-center">แบ่งปันรูปภาพ</h1>
             <div className='picturelist-container'>
 
                 {

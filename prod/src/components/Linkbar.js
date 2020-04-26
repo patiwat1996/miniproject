@@ -10,10 +10,10 @@ const Linkbar = () => {
       <Navbar bg="dark" variant="dark">
         <Navbar.Brand href="/">หน้าหลัก</Navbar.Brand>
         <Nav className="mr-auto">
-          <Nav.Link href="/picture">รายการ</Nav.Link>
+          <Nav.Link href="/vedio">ผลงานเพลง</Nav.Link>
         </Nav>
         <Form inline>
-          <Button variant="danger" href="/login">Back to Login</Button>
+          <Button variant="danger" href="/login">Addmin Zone </Button>
         </Form>
       </Navbar>
     </div>

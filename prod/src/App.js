@@ -24,7 +24,7 @@ const App = () => {
         <Route path="/" component={Linkbar} />
         <Route exact path="/" component={Home} />
         <Route path="/login" component={LoginForm} />
-        <Route path="/picture" component={Vedio} />
+        <Route path="/vedio" component={Vedio} />
 
 
 
