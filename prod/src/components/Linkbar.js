@@ -13,7 +13,7 @@ const Linkbar = () => {
           <Nav.Link href="/vedio">ผลงานเพลง</Nav.Link>
         </Nav>
         <Form inline>
-          <Button variant="danger" href="/login">Addmin Zone </Button>
+          <Button variant="danger" href="/login">Admin Zone </Button>
         </Form>
       </Navbar>
     </div>

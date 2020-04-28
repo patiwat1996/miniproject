@@ -12,7 +12,7 @@ const InputForm = props => {
     const form = useSelector(state => state.form)
 
     const addPicture = async () => {
-        const result = await axios.post(`http://localhost/api/pictures/`, form)
+        const result = await axios.post(`https://polar-ravine-26409.herokuapp.com/api/pictures`, form)
         dispatch({
             type: "ADD_PICTURE",
             picture: { ...form, id: pictures.length > 0 ? pictures[pictures.length - 1].id + 1 : 0 }
@@ -30,13 +30,13 @@ const InputForm = props => {
                     <tr>
                         <td>Caption</td>
                         <td>
-                            <input className='inpt' type="text" onChange={(e) => dispatch({ type: "CHANGE_NAME", name: e.target.value })} />
+                            <input className='inpt' type="text" onChange={(e) => dispatch({ type: "CHANGE_CAPTION", caption: e.target.value })} />
                         </td>
                     </tr>
                     <tr>
                         <td>Name</td>
                         <td>
-                            <input className='inpt' type="text" onChange={(e) => dispatch({ type: "CHANGE_WEIGHT", weight: e.target.value })} />
+                            <input className='inpt' type="text" onChange={(e) => dispatch({ type: "CHANGE_NAME", name: e.target.value })} />
                         </td>
                     </tr>
                     <tr>

@@ -11,7 +11,7 @@ const Home = props => {
     const dispatch = useDispatch();
 
     const getPictures = async () => {
-        const result = await axios.get(`http://localhost/api/pictures`)
+        const result = await axios.get(`https://polar-ravine-26409.herokuapp.com/api/pictures`)
         const action = { type: 'GET_PICTURES', pictures: result.data }
         dispatch(action)
     }
